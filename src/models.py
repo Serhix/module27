@@ -34,7 +34,7 @@ class Teacher(Base):
     __tablename__ = "teachers"
     id = Column(Integer, primary_key=True)
     full_name = Column(String(150), nullable=False)
-    is_sciens_title = Column(Boolean, nullable=True)
+    is_sciens_title = Column(Boolean, default=False)
     create_at = Column(DateTime, default=func.now())
 
     stady_subject = relationship("StadySubject", back_populates="teacher")
