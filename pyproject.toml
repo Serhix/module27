@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "module27"
+version = "0.1.0"
+description = ""
+authors = ["Strategs <127782103+Strategs@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.20"
+alembic = "^1.11.3"
+psycopg2 = "^2.9.7"
+faker = "^19.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
