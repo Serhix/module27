@@ -1,7 +1,6 @@
 import argparse
-import sys
-from sqlalchemy.exc import SQLAlchemyError
-from src_cli.repositiry import create_model, get_all
+
+from src_cli.repositiry import create_model, get_all, update_model, remove_model
 
 
 parser = argparse.ArgumentParser(description='CLI for CRUD')
@@ -27,15 +26,10 @@ def main():
             create_model(my_args)
         case 'list':
             get_all(my_args)
-        # case 'update':
-        #     # t = update_todo(_id=_id, title=title, description=description, user=user)
-        #     if t:
-        #         print(t.id, t.title, t.description, t.user.login)
-        #     else:
-        #         print('Not found!!!')
-        # case 'remove':
-        #     r = remove_todo(_id=_id, user=user)
-        #     print(f'Remove {r}')
+        case 'update':
+            update_model(my_args)
+        case 'remove':
+            remove_model(my_args)
         case _:
             print('Wrong comand!!!')
 
